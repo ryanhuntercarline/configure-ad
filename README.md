@@ -6,9 +6,6 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,31 +21,45 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Creat 2 VMs in Microsoft Azure
+    - 1 Domain Controller
+    - 1 Client Computer
+- Change Domain Controller's Private IP to Static 
+- Install Active Directory in Domian Controller 
+- Create Organizaitonal Units in Active Directory
+- Connect Client 1 to Domain Controller
+- Setup Remote Desktop for non-administrative users on Client 1
 
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![DC-1](https://github.com/ryanhuntercarline/configure-ad/assets/141659465/9cebca24-eca0-4dac-9baf-fdfd212c4fd0) ![Screenshot 2023-08-07 163325](https://github.com/ryanhuntercarline/configure-ad/assets/141659465/c985f9d3-eed5-4b2d-9366-2d0ced4c71b6)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+In Microsoft Azure, set up two virtual machines: the first as a Domain Controller to host Active Directory, and the second as a client computer for future Domain Controller connection testing
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  ![staticIP](https://github.com/ryanhuntercarline/configure-ad/assets/141659465/64b4acd9-4f31-41dc-a3a7-3e48ebb93fcd)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Still in Azure, modify the Domain Controller's private IP address from dynamic to static for consistent network configuration.
 </p>
 <br />
 
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+![ADDomainServices](https://github.com/ryanhuntercarline/configure-ad/assets/141659465/b3e31dde-0548-4759-9169-c72ea5f22d17)
+
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
